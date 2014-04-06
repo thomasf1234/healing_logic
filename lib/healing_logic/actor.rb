@@ -32,10 +32,10 @@ class Actor
   private
 
   def get_data_for spells
-    binding.pry
     hash = {}
     spells.each do |spell|
       hash[spell] = Spells::ALL[spell]
+      hash[spell][:name] = spell
       hash[spell][:cost] =  recalculate_cost_for hash[spell]
     end
     spells = hash

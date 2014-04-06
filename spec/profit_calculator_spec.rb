@@ -26,11 +26,11 @@ describe ProfitCalculator do
     let(:spell) { {:cost=>cost, :power=>power, :period=>period, :target=>1, :school=>"restoration"} }
 
     context 'healer has 50% magicka and patient has 50% health' do
-      let(:patient_current_health) { 150 }
-      let(:healer_current_magicka) { 200 }
-      let(:power) { 30 }
+      let(:patient_current_health) { 15 }
+      let(:healer_current_magicka) { 60 }
+      let(:power) { 50 }
       let(:period) { 0 }
-      let(:cost) { 100 }
+      let(:cost) { 40 }
       let(:expected_percentage) { -0.15000000000000002 }
 
       it { should eq expected_percentage }
